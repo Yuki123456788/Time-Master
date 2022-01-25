@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>799</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>100</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>800</width>
+    <height>600</height>
+   </size>
+  </property>
+  <property name="cursor">
+   <cursorShape>PointingHandCursor</cursorShape>
+  </property>
+  <property name="focusPolicy">
+   <enum>Qt::TabFocus</enum>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(204, 204, 204);</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="analysis_but">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>270</y>
+      <width>241</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	border: 0;
+	text-align: left;
+	margin-left: 15px;
+}</string>
+    </property>
+    <property name="text">
+     <string>Analysis</string>
+    </property>
+    <property name="icon">
+     <iconset resource="Chart.qrc">
+      <normaloff>:/newPrefix/img/bar-chart.png</normaloff>:/newPrefix/img/bar-chart.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>16</width>
+      <height>16</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="Line" name="line">
+    <property name="geometry">
+     <rect>
+      <x>250</x>
+      <y>0</y>
+      <width>16</width>
+      <height>16777215</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="instructions_but">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>320</y>
+      <width>241</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	border: 0;
+	text-align: left;
+	margin-left: 15px;
+}</string>
+    </property>
+    <property name="text">
+     <string>Instructions</string>
+    </property>
+    <property name="icon">
+     <iconset resource="Chart.qrc">
+      <normaloff>:/newPrefix/img/question.png</normaloff>:/newPrefix/img/question.png</iconset>
+    </property>
+   </widget>
+   <widget class="QStackedWidget" name="stackedWidget">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>0</y>
+      <width>541</width>
+      <height>601</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>5</number>
+    </property>
+    <widget class="QWidget" name="important_urgent_page">
+     <widget class="QLabel" name="imur_label">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>60</y>
+        <width>171</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Important &amp; Urgent</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="important_unurgent_page">
+     <widget class="QLabel" name="imunur_label">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>70</y>
+        <width>191</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Important but not urgnet</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="unimportant_urgent_page">
+     <widget class="QLabel" name="unimur_label">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>90</y>
+        <width>171</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Not important but urgent</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="unimportant_unurgent_page">
+     <widget class="QLabel" name="unimunur_label">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>60</y>
+        <width>221</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Not important &amp; not urgent</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="char_page">
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>20</y>
+        <width>521</width>
+        <height>571</height>
+       </rect>
+      </property>
+      <property name="focusPolicy">
+       <enum>Qt::TabFocus</enum>
+      </property>
+      <property name="tabPosition">
+       <enum>QTabWidget::North</enum>
+      </property>
+      <property name="tabShape">
+       <enum>QTabWidget::Rounded</enum>
+      </property>
+      <property name="currentIndex">
+       <number>3</number>
+      </property>
+      <property name="elideMode">
+       <enum>Qt::ElideRight</enum>
+      </property>
+      <property name="movable">
+       <bool>false</bool>
+      </property>
+      <property name="tabBarAutoHide">
+       <bool>false</bool>
+      </property>
+      <widget class="QWidget" name="day_tab">
+       <attribute name="title">
+        <string>Day</string>
+       </attribute>
+      </widget>
+      <widget class="QWidget" name="week_tab">
+       <attribute name="title">
+        <string>Week</string>
+       </attribute>
+      </widget>
+      <widget class="QWidget" name="month_tab">
+       <attribute name="title">
+        <string>Month</string>
+       </attribute>
+      </widget>
+      <widget class="QWidget" name="year_tab">
+       <attribute name="title">
+        <string>Year</string>
+       </attribute>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="instructions_page">
+     <widget class="QLabel" name="instructions_label">
+      <property name="geometry">
+       <rect>
+        <x>270</x>
+        <y>200</y>
+        <width>141</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Instructions</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="im_ur_but">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>70</y>
+      <width>110</width>
+      <height>70</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+      <horstretch>10</horstretch>
+      <verstretch>50</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	background-color: #F2FFE9;
+	border: 0px;
+	border-radius: 5px;
+	margint-button:3px;
+}</string>
+    </property>
+    <property name="text">
+     <string>Important
+Urgent</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="im_nur_but">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>70</y>
+      <width>110</width>
+      <height>70</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+      <horstretch>10</horstretch>
+      <verstretch>50</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	background-color: #F2FFE9;
+	border: 0px;
+	border-radius: 5px;
+	margint-button:3px;
+}</string>
+    </property>
+    <property name="text">
+     <string>Important
+Not urgent</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="nim_ur_but">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>150</y>
+      <width>110</width>
+      <height>70</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+      <horstretch>10</horstretch>
+      <verstretch>50</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	background-color: #F2FFE9;
+	border: 0px;
+	border-radius: 5px;
+	margint-top:3px;
+}</string>
+    </property>
+    <property name="text">
+     <string>Not important
+Urgent</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="nim_nur_but">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>150</y>
+      <width>110</width>
+      <height>70</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+      <horstretch>10</horstretch>
+      <verstretch>50</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	background-color: #F2FFE9;
+	border: 0px;
+	border-radius: 5px;
+	margint-top:3px;
+}</string>
+    </property>
+    <property name="text">
+     <string>Not important
+Not urgent</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="reset_but">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>540</y>
+      <width>35</width>
+      <height>35</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+	border: 5px black solid;
+	border-radius: 3px;
+	background-color: white;
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset resource="Chart.qrc">
+      <normaloff>:/newPrefix/img/refresh.png</normaloff>:/newPrefix/img/refresh.png</iconset>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="add_but">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>540</y>
+      <width>35</width>
+      <height>35</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+	border: 2px black solid;
+	border-radius: 3px;
+	background-color: white;
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset resource="Chart.qrc">
+      <normaloff>:/newPrefix/img/add.png</normaloff>:/newPrefix/img/add.png</iconset>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources>
+  <include location="Chart.qrc"/>
+ </resources>
+ <connections/>
+</ui>
