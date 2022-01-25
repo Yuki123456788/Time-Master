@@ -1,8 +1,0 @@
-<RCC>
-  <qresource prefix="newPrefix">
-    <file>img/refresh.png</file>
-    <file>img/question.png</file>
-    <file>img/add.png</file>
-    <file>img/bar-chart.png</file>
-  </qresource>
-</RCC>
